@@ -11,8 +11,8 @@ def hello(event, context):
     try:
         your_num = int(your_num)
     except:
-        your_num = 1
-        
+        your_num = 0
+
     body = {
         "message": "check for even or odd",
         "input": your_num,
