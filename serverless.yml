@@ -1,0 +1,19 @@
+service: testbed
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+    - http:
+        path: users/create
+        method: get
+  goodbye:
+    handler: handler.goodbye
+    events:
+    - http:
+        path: users/create/goodbye
+        method: get
